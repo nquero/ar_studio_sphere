@@ -1,5 +1,5 @@
 {
-  "name": "Modular AR studio",
+  "name": "ModularARStudio",
   "version": "1.0.0",
   "description": "",
   "main": "./mill_scripts/index.js",
