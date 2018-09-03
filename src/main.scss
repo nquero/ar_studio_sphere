@@ -1,0 +1,80 @@
+@import 'mixins.scss';
+@import 'media_queries.scss';
+@import 'style.scss';
+
+
+
+html, body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.flexbox-parent
+{
+    width: 100%;
+    height: 100%;
+
+    @include flex;
+    flex-direction: column;
+
+  .header
+    {
+      flex: 1;
+      font-size: 3vh;
+    }
+  .footer
+    {
+      flex: 1;
+      button
+      {
+          @include button-style;
+      }
+    }
+
+  .content
+    {
+      @include flex;
+      flex-direction: column;
+      flex: 4;
+
+      justify-content:stretch; /* align items in Main Axis */
+      align-items: center; /* align items in Cross Axis */
+      align-content: center; /* Extra space in Cross Axis */
+
+      font-size: 8vh;
+      font-family: ProximaNova-Bold;
+
+
+      .content-area-item
+        {
+          overflow: auto;
+          @include flex;
+          flex-direction: row;
+        }
+        .colours
+          {
+            @include flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-left: 50px;
+            //padding: 20px;
+            //width: 100%;
+            .circle {
+              height: 120px;
+              width: 120px;
+              background: linear-gradient(to bottom right, rgba(255,0,0,1), rgba(255,0,0,0));
+              border-radius: 50%;
+              margin: 10px;
+            }
+          }
+    }
+}
+
+.flexbox-item
+{
+    padding: 8px;
+    @include align-self(center);
+}

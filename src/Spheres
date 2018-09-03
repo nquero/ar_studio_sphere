@@ -1,0 +1,51 @@
+const Diagnostics = require("Diagnostics")
+const Reactive = require("Reactive")
+const Scene = require("Scene")
+const FaceTracking = require('FaceTracking')
+//const TouchGestures = require('TouchGestures')
+const Materials = require('Materials')
+const Networking = require('Networking')
+const Time = require('Time')
+const Animation = require('Animation')
+
+
+
+
+import Animations from './Animations'
+
+
+const numberOfSpheres = 10
+
+for (let i = 1; i < numberOfSpheres + 1; i++){
+    
+    const flyingSpheres = Scene.root.find('sphere'+ i)
+    //Diagnostics.log(flyingSpheres.name);
+    Animations.sphereAnimation(flyingSpheres).start();
+
+}
+
+
+
+//CREATE ARRAY 
+
+//const spheresArray = []
+//let spheresInScene = Scene.root.find('sphere' + count)
+
+//spheresArray.push(spheresInScene)
+
+
+
+
+//GOAL
+
+//n number of spheres
+// module system 
+//create particle class
+// loop to instantiate sphere class
+// method called run animation
+
+//JS
+//- OO
+//- classes
+//- for loops
+//- arrays
